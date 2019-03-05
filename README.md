@@ -26,19 +26,15 @@ cat .ssh/id_rsa.pub
 ```
 
 #### LXD Daemon fun
+````
+# get into crosh in chrome
+ctrl + alt + t
 
-get into crosh in chrome
+# get into your termina vm
+vmc start termina
 
-`ctrl + alt + t`
-
-get into your termina vm
-
-`vmc start termina`
-
-get ubuntu up and running
-
-```
+# get ubuntu up and running
 lxc list
 lxc launch ubuntu:18.04 ub
 lxc exec ub bash
-```
+````
