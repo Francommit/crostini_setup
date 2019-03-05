@@ -31,4 +31,5 @@ sudo apt-get update
 sudo apt-get install -y powershell
 sudo apt-get install -f
 
-# TO-DO: Add docker installation
+# Docker installation
+curl -L https://gist.githubusercontent.com/upbeta01/3b968320b3a579c326ab6cd2a195b10d/raw/196eb33a6e4b5ef9abae98d9e221ebd62a61fd65/install-docker-deb9.sh | bash
