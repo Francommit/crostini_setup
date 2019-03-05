@@ -24,3 +24,7 @@ sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
+
+# TO-DO: Add git ui tool
+# TO-DO: Add powershell installation
+# TO-DO: Add docker installation
