@@ -2,6 +2,7 @@
 sudo apt-get -y update && sudo apt-get -y dist-upgrade \
   && sudo apt -y install git bash-completion
 
+# TO-DO: Add git ui tool
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -11,7 +12,6 @@ sudo apt-get install sublime-text
 # Set the user scaling to 2.0, it looks terrible on a pixelbook without it
 cd ~/.config/sublime-text-3/Packages/User
 curl -LJO https://github.com/Francommit/crostini_setup/Preferences.sublime-settings
-
 
 # Tilix (Terminal alternative)
 echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee /etc/apt/sources.list.d/stretch-backports.list
@@ -23,6 +23,12 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
 
-# TO-DO: Add git ui tool
-# TO-DO: Add powershell installation
+# Powershell 6.0 - pwsh
+sudo apt install -y curl gnupg apt-transport-https liblttng-ust-ctl2 liblttng-ust0 libunwind8 liburcu4 wget
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/microsoft.list'
+sudo apt-get update
+sudo apt-get install -y powershell
+sudo apt-get install -f
+
 # TO-DO: Add docker installation
