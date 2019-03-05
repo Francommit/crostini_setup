@@ -10,7 +10,9 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
-# TO-DO: figured out how to change the scaling to 2.0 on the fly
+# Set the user scaling to 2.0, it looks terrible on a pixelbook without it
+cd ~/.config/sublime-text-3/Packages/User
+curl -LJO https://github.com/Francommit/crostini_setup/Preferences.sublime-settings
 
 
 # Tilix (Terminal alternative)
