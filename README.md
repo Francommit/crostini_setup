@@ -25,15 +25,18 @@ ssh-add ~/.ssh/id_rsa
 cat .ssh/id_rsa.pub
 ```
 
-####LXD Daemon fun
+#### LXD Daemon fun
 
 get into crosh in chrome
+
 `ctrl + alt + t`
 
 get into your termina vm
+
 `vmc start termina`
 
 get ubuntu up and running
+
 ```
 lxc list
 lxc launch ubuntu:18.04 ub
