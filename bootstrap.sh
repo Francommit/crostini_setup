@@ -1,8 +1,6 @@
 # Upgrade existing packages
 sudo apt-get -y update && sudo apt-get -y dist-upgrade \
-  && sudo apt -y install git bash-completion \
-  && git config --global user.email francommit@gmail.com \
-  && git config --global user.name "Francommit"
+  && sudo apt -y install git bash-completion
 
 
 # Sublime Text
