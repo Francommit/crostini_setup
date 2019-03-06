@@ -12,7 +12,7 @@ The end goal is to execute a single script in the Terminal and have everything b
 `git clone https://github.com/Francommit/crostini_setup.git cd crostini_setup ./bootstrap.sh`
 
 
-## Other un-scriptable pieces
+## Miscellaneous pieces
 
 #### SSH Keys
 ```
@@ -40,3 +40,23 @@ lxc list
 lxc launch ubuntu:18.04 ub
 lxc exec ub bash
 ````
+
+#### Docker Fun
+
+##### Bamboo Server to go
+```
+docker volume create --name bambooVolume
+docker run -v bambooVolume:/var/atlassian/application-data/bamboo --name="bamboo" --init -d -p 54663:54663 -p 8085:8085 atlassian/bamboo-server
+```
+
+Launch via http://localhost:8085/
+
+It keeps the db in the bambooVolume, so once you add your evaulation license you're good to go.
+
+
+##### WIP Portainer
+Can't actually get this to work currently.
+```
+docker volume create portainer_data
+docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+```
