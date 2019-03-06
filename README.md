@@ -48,15 +48,13 @@ lxc exec ub bash
 docker volume create --name bambooVolume
 docker run -v bambooVolume:/var/atlassian/application-data/bamboo --name="bamboo" --init -d -p 54663:54663 -p 8085:8085 atlassian/bamboo-server
 ```
-
-Launch via http://localhost:8085/
-
+Launch via http://penguin.linux.test:8085/
 It keeps the db in the bambooVolume, so once you add your evaulation license you're good to go.
 
 
-##### WIP Portainer
-Can't actually get this to work currently.
+##### Portainer
 ```
 docker volume create portainer_data
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
+Launch via http://penguin.linux.test:9000/
