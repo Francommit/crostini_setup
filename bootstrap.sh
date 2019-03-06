@@ -2,7 +2,12 @@
 sudo apt-get -y update && sudo apt-get -y dist-upgrade \
   && sudo apt -y install git bash-completion
 
-# TO-DO: Add git ui tool
+# Install flatpak
+sudo apt install flatpak -y
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install Gitg 
+sudo flatpak install -y flathub org.gnome.gitg
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
