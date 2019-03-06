@@ -6,6 +6,12 @@ sudo apt-get -y update && sudo apt-get -y dist-upgrade \
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Install snap package support
+sudo apt -y install snapd
+
+# LXD client so we can interact with other containers outside of penguin but inside of termina
+sudo snap install lxd
+
 # Install Gitg 
 sudo flatpak install -y flathub org.gnome.gitg
 
