@@ -6,6 +6,12 @@ sudo apt-get -y update && sudo apt-get -y dist-upgrade \
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Configue Snap
+# fuse is required
+curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/libsquashfuse0_0.1.103-1_amd64.deb > libsquashfuse0_0.1.103-1_amd64.deb
+sudo dpkg -i libsquashfuse0_0.1.103-1_amd64.deb
+curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/squashfuse_0.1.103-1_amd64.deb > squashfuse_0.1.103-1_amd64.deb
+sudo dpkg -i squashfuse_0.1.103-1_amd64.deb
 # Install snap package support
 sudo apt -y install snapd
 

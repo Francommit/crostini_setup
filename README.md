@@ -41,6 +41,25 @@ lxc launch ubuntu:18.04 ub
 lxc exec ub bash
 ````
 
+#### Configure the LXD client to remotely connect to termina
+Using crosh, configure this in termina
+````
+lxc config set core.https_address :8443
+lxc config set core.trust_password some-password
+````
+
+Perform the following in penguin/terminal
+````
+# Find the IP of termina
+ip -4 route show
+# Remotely connect to the LXD running outside of penguin (you'll need your password)
+lxc remote add chromeos 100.115.92.193
+# set the lxd client in penguin to always connect
+lxc remote set-default chromeos 
+# You should now have a list of the containers running in termina
+lxc list
+````
+
 #### Docker Fun
 
 ##### Bamboo Server to go
