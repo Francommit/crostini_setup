@@ -9,7 +9,7 @@ The end goal is to execute a single script in the Terminal and have everything b
 
 ## Copy and paste this in your Terminal:
 ```
-sudo apt -y install git && git clone https://github.com/Francommit/crostini_setup.git && cd crostini_setup && chmod -x ./bootstrap.sh && ./bootstrap.sh
+sudo apt -y install git && git clone https://github.com/Francommit/crostini_setup.git && cd crostini_setup && chmod +x ./bootstrap.sh && ./bootstrap.sh
 ```
 
 ## Miscellaneous pieces
