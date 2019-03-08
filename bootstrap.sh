@@ -28,7 +28,8 @@ sudo apt-get update
 sudo apt-get install sublime-text
 # Set the user scaling to 2.0, it looks terrible on a pixelbook without it
 cd ~/.config/sublime-text-3/Packages/User
-curl -LJO https://github.com/Francommit/crostini_setup/Preferences.sublime-settings
+curl -LJO https://github.com/Francommit/crostini_setup/raw/master/Preferences.sublime-settings
+          
 
 # Tilix (Terminal alternative)
 echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee /etc/apt/sources.list.d/stretch-backports.list
