@@ -1,3 +1,7 @@
+#
+# Installations
+#
+
 # Upgrade existing packages
 sudo apt-get -y update && sudo apt-get -y dist-upgrade \
   && sudo apt -y install git bash-completion
@@ -6,13 +10,12 @@ sudo apt-get -y update && sudo apt-get -y dist-upgrade \
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Configue Snap
+# Install Snap packages
 # fuse is required
 curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/libsquashfuse0_0.1.103-1_amd64.deb > libsquashfuse0_0.1.103-1_amd64.deb
 sudo dpkg -i libsquashfuse0_0.1.103-1_amd64.deb
 curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/squashfuse_0.1.103-1_amd64.deb > squashfuse_0.1.103-1_amd64.deb
 sudo dpkg -i squashfuse_0.1.103-1_amd64.deb
-# Install snap package support
 sudo apt -y install snapd
 
 # LXD client so we can interact with other containers outside of penguin but inside of termina
@@ -26,10 +29,6 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
-# Set the user scaling to 2.0, it looks terrible on a pixelbook without it
-cd ~/.config/sublime-text-3/Packages/User
-curl -LJO https://github.com/Francommit/crostini_setup/raw/master/Preferences.sublime-settings
-          
 
 # Tilix (Terminal alternative)
 echo 'deb http://ftp.debian.org/debian stretch-backports main' | sudo tee /etc/apt/sources.list.d/stretch-backports.list
@@ -51,3 +50,15 @@ sudo apt-get install -f
 
 # Docker installation
 curl -L https://gist.githubusercontent.com/upbeta01/3b968320b3a579c326ab6cd2a195b10d/raw/196eb33a6e4b5ef9abae98d9e221ebd62a61fd65/install-docker-deb9.sh | bash
+
+# TO-DO: Dotnet Core
+
+
+#
+# Configurations
+#
+
+# Set the user scaling to 2.0, it looks terrible on a pixelbook without it
+cd ~/.config/sublime-text-3/Packages/User
+curl -LJO https://github.com/Francommit/crostini_setup/raw/master/Preferences.sublime-settings
+   
