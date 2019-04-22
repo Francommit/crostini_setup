@@ -6,6 +6,10 @@ I had some fun in the past configuring a Powershell script to bootstrap a new in
 
 The end goal is to execute a single script in the Terminal and have everything be magically setup for you in your container. It's really nice the way that ChromeOS syncs everything for you, so you can essentially reformat in minutes. However, with the container functionality being new and breaking, it would be nice to have an all in one script that did it for you.
 
+## Common commands
+```
+sudo apt-get update && sudo apt-get upgrade
+```
 
 ## Copy and paste this in your Terminal:
 ```
