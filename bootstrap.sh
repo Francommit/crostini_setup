@@ -64,6 +64,11 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 sudo apt-get update
 sudo apt-get install dotnet-sdk-2.2
 
+# Remmina
+sudo apt install flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install flathub org.remmina.Remmina -y
+
 #
 # Configurations
 #
