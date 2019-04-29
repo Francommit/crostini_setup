@@ -6,6 +6,9 @@
 sudo apt-get -y update && sudo apt-get -y dist-upgrade \
   && sudo apt -y install git bash-completion
 
+# Ping
+sudo apt install iputils-ping -y
+
 # Install flatpak
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
