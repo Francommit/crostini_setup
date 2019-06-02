@@ -74,6 +74,9 @@ sudo apt install firefox-esr -y
 sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
+# Intell-J Community Setup
+sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
+
 #
 # Configurations
 #
