@@ -81,8 +81,8 @@ sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 sudo apt-get update && apt-get upgrade
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:linuxuprising/java -y
-sudo apt-get update -u
-sudo apt-get install oracle-java12-installer -u
+sudo apt-get update -y
+sudo apt-get install oracle-java12-installer -y
 
 #
 # Configurations
