@@ -78,11 +78,7 @@ sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --
 sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 
 # Install the java sdk
-sudo apt-get update && apt-get upgrade
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:linuxuprising/java -y
-sudo apt-get update -y
-sudo apt-get install oracle-java12-installer -y
+sudo apt-get install default-jdk -y
 
 #
 # Configurations
