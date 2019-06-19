@@ -69,11 +69,6 @@ sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub org.remmina.Remmina -y
 
-#Firefox ESR
-sudo apt install firefox-esr -y
-sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
-sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
-
 # Intell-J Community Setup
 sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 
