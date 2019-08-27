@@ -25,7 +25,9 @@ sudo apt -y install snapd
 sudo snap install lxd
 
 # Install Gitg 
-sudo flatpak install -y flathub org.gnome.gitg
+# sudo flatpak install -y flathub org.gnome.gitg
+# Install Kraken
+sudo apt install libxkbcommon0 -y 
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -70,10 +72,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install flathub org.remmina.Remmina -y
 
 # Intell-J Community Setup
-sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-
+# sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
+# can't get the JDK to load correctly
 # Install the java sdk
-sudo apt-get install default-jdk -y
+# sudo apt-get install default-jdk -y
 
 #
 # Configurations
