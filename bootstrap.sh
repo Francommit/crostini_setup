@@ -24,10 +24,11 @@ sudo apt -y install snapd
 # LXD client so we can interact with other containers outside of penguin but inside of termina
 sudo snap install lxd
 
-# Install Gitg 
-# sudo flatpak install -y flathub org.gnome.gitg
 # Install Kraken
-sudo apt install libxkbcommon0 -y 
+sudo apt install libxkbcommon0 libgnome-keyring-common libgnome-keyring-dev -y 
+sudo dpkg -i gitkraken-amd64.deb
+sudo apt-get if -install -y
+sudo dpkg -i gitkraken-amd64.deb
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
