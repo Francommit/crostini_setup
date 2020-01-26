@@ -65,18 +65,13 @@ sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 sudo apt-get update
-sudo apt-get install dotnet-sdk-2.2
+sudo apt-get install dotnet-sdk-3.1
 
 # Remmina
 sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub org.remmina.Remmina -y
 
-# Intell-J Community Setup
-# sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-# can't get the JDK to load correctly
-# Install the java sdk
-# sudo apt-get install default-jdk -y
 
 #
 # Configurations
