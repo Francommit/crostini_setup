@@ -57,7 +57,7 @@ sudo apt-get install -f
 # Docker installation
 curl -L https://gist.githubusercontent.com/upbeta01/3b968320b3a579c326ab6cd2a195b10d/raw/196eb33a6e4b5ef9abae98d9e221ebd62a61fd65/install-docker-deb9.sh | bash
 
-# Dotnet Core 2.2
+# Dotnet Core 3.1
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/debian/9/prod.list
@@ -72,6 +72,9 @@ sudo apt install flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub org.remmina.Remmina -y
 
+# Terraform
+wget -q https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
+sudo unzip ./terraform_0.12.20_linux_amd64.zip -d /usr/local/bin/
 
 #
 # Configurations

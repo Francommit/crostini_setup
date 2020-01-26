@@ -27,11 +27,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
-# Remmina
-sudo apt install flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub org.remmina.Remmina -y
-
 # Set the user scaling to 2.0, it looks terrible on a pixelbook without it
 cd ~/.config/sublime-text-3/Packages/User
 curl -LJO https://github.com/Francommit/crostini_setup/raw/master/Preferences.sublime-settings
