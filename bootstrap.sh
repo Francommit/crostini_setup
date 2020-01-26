@@ -76,6 +76,11 @@ sudo flatpak install flathub org.remmina.Remmina -y
 wget -q https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
 sudo unzip ./terraform_0.12.20_linux_amd64.zip -d /usr/local/bin/
 
+# AWS
+curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
 #
 # Configurations
 #
