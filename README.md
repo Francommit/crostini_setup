@@ -12,9 +12,19 @@ sudo apt-get update && sudo apt-get upgrade
 ```
 
 ## Copy and paste this in your Terminal:
+
+### Full Install
+This is designed for chromebooks with a bit more grunt than others 
 ```
 sudo apt -y install git && git clone https://github.com/Francommit/crostini_setup.git && cd crostini_setup && chmod +x ./bootstrap.sh && ./bootstrap.sh
 ```
+
+### Light Install
+This is designed for lightweight chromebooks 
+```
+sudo apt -y install git && git clone https://github.com/Francommit/crostini_setup.git && cd crostini_setup && chmod +x ./light_bootstrap.sh && ./light_bootstrap.sh
+```
+
 
 ## Miscellaneous pieces
 
