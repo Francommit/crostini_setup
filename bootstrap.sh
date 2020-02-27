@@ -10,25 +10,25 @@ sudo apt-get -y update && sudo apt-get -y dist-upgrade \
 sudo apt install iputils-ping -y
 
 # Install flatpak
-sudo apt install flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# sudo apt install flatpak -y
+# sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install Snap packages
 # fuse is required
-curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/libsquashfuse0_0.1.103-1_amd64.deb > libsquashfuse0_0.1.103-1_amd64.deb
-sudo dpkg -i libsquashfuse0_0.1.103-1_amd64.deb
-curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/squashfuse_0.1.103-1_amd64.deb > squashfuse_0.1.103-1_amd64.deb
-sudo dpkg -i squashfuse_0.1.103-1_amd64.deb
-sudo apt -y install snapd
+# curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/libsquashfuse0_0.1.103-1_amd64.deb > libsquashfuse0_0.1.103-1_amd64.deb
+# sudo dpkg -i libsquashfuse0_0.1.103-1_amd64.deb
+# curl http://ftp.us.debian.org/debian/pool/main/s/squashfuse/squashfuse_0.1.103-1_amd64.deb > squashfuse_0.1.103-1_amd64.deb
+# sudo dpkg -i squashfuse_0.1.103-1_amd64.deb
+# sudo apt -y install snapd
 
 # LXD client so we can interact with other containers outside of penguin but inside of termina
-sudo snap install lxd
+# sudo snap install lxd
 
 # Install Kraken
-sudo apt install libxkbcommon0 libgnome-keyring-common libgnome-keyring-dev -y 
-sudo dpkg -i gitkraken-amd64.deb
-sudo apt-get if -install -y
-sudo dpkg -i gitkraken-amd64.deb
+# sudo apt install libxkbcommon0 libgnome-keyring-common libgnome-keyring-dev -y 
+# sudo dpkg -i gitkraken-amd64.deb
+# sudo apt-get if -install -y
+# sudo dpkg -i gitkraken-amd64.deb
 
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -47,25 +47,25 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 # Powershell 6.0 - pwsh
-sudo apt install -y curl gnupg apt-transport-https liblttng-ust-ctl2 liblttng-ust0 libunwind8 liburcu4 wget
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/microsoft.list'
-sudo apt-get update
-sudo apt-get install -y powershell
-sudo apt-get install -f
+# sudo apt install -y curl gnupg apt-transport-https liblttng-ust-ctl2 liblttng-ust0 libunwind8 liburcu4 wget
+# curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+# sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/microsoft.list'
+# sudo apt-get update
+# sudo apt-get install -y powershell
+# sudo apt-get install -f
 
 # Docker installation
 curl -L https://gist.githubusercontent.com/upbeta01/3b968320b3a579c326ab6cd2a195b10d/raw/196eb33a6e4b5ef9abae98d9e221ebd62a61fd65/install-docker-deb9.sh | bash
 
 # Dotnet Core 3.1
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
-sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/debian/9/prod.list
-sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
-sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
-sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-sudo apt-get update
-sudo apt-get install dotnet-sdk-3.1
+# wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+# sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
+# wget -q https://packages.microsoft.com/config/debian/9/prod.list
+# sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
+# sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
+# sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
+# sudo apt-get update
+# sudo apt-get install dotnet-sdk-3.1
 
 # Remmina
 sudo apt install flatpak
@@ -73,13 +73,13 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install flathub org.remmina.Remmina -y
 
 # Terraform
-wget -q https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
-sudo unzip ./terraform_0.12.20_linux_amd64.zip -d /usr/local/bin/
+# wget -q https://releases.hashicorp.com/terraform/0.12.20/terraform_0.12.20_linux_amd64.zip
+# sudo unzip ./terraform_0.12.20_linux_amd64.zip -d /usr/local/bin/
 
 # AWS
-curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
+# curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# unzip awscliv2.zip
+# sudo ./aws/install
 
 #
 # Configurations
