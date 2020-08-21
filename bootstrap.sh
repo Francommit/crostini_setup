@@ -22,6 +22,10 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
     source /etc/profile.d/vte.sh
 fi
 
+# VSCode Installation
+curl -L "https://go.microsoft.com/fwlink/?LinkID=760868" > vscode.deb
+sudo apt install ./vscode.deb -y
+
 # Docker installation
 curl -L https://gist.githubusercontent.com/upbeta01/3b968320b3a579c326ab6cd2a195b10d/raw/196eb33a6e4b5ef9abae98d9e221ebd62a61fd65/install-docker-deb9.sh | bash
 
